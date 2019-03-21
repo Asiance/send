@@ -7,11 +7,13 @@ function banner(state) {
   if (state.layout) {
     return; // server side
   }
-  const show =
-    !state.capabilities.standalone &&
-    !/firefox/i.test(navigator.userAgent) &&
-    document.querySelector('html').lang.startsWith('en') &&
-    !state.route.startsWith('/unsupported/');
+  // Hide promo banner for firefox browser
+  // const show =
+  //   !state.capabilities.standalone &&
+  //   !/firefox/i.test(navigator.userAgent) &&
+  //   document.querySelector('html').lang.startsWith('en') &&
+  //   !state.route.startsWith('/unsupported/');
+  const show = false;
   if (show) {
     return state.cache(Promo, 'promo').render();
   }

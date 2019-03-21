@@ -17,7 +17,7 @@ module.exports = function(state, emit) {
               href="https://www.mozilla.org/privacy/"
               target="__blank"
               rel="noopener noreferrer"
-              class="text-blue-dark hover:underline"
+              class="text-primary-dark hover:underline"
               >Mozilla Privacy Policy</a
             >
             <span
@@ -29,7 +29,7 @@ module.exports = function(state, emit) {
               href="https://github.com/mozilla/send/blob/master/docs/metrics.md"
               target="__blank"
               rel="noopener noreferrer"
-              class="text-blue-dark hover:underline"
+              class="text-primary-dark hover:underline"
               >here</a
             >.
           </p>

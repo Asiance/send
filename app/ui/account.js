@@ -62,7 +62,7 @@ class Account extends Component {
       return html`
         <send-account>
           <button
-            class="p-2 md:p-4 border rounded-lg text-blue-dark border-blue-dark hover:text-white hover:bg-blue-dark focus:outline"
+            class="p-2 md:p-4 border rounded-lg text-primary-dark border-primary-dark hover:text-white hover:bg-primary-dark focus:outline"
             onclick="${e => this.login(e)}"
             title="${translate('signInButton')}"
           >

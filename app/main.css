@@ -26,7 +26,7 @@ body {
 }
 
 .btn {
-  @apply bg-blue-dark;
+  @apply bg-primary-dark;
   @apply text-white;
   @apply cursor-pointer;
   @apply py-4;
@@ -34,11 +34,11 @@ body {
 }
 
 .btn:hover {
-  @apply bg-blue-darker;
+  @apply bg-primary-darker;
 }
 
 .btn:focus {
-  @apply bg-blue-darker;
+  @apply bg-primary-darker;
 }
 
 .checkbox {
@@ -68,16 +68,16 @@ body {
 }
 
 .checkbox > label:hover::before {
-  @apply border-blue-dark;
+  @apply border-primary-dark;
 }
 
 .checkbox > input:focus + label::before {
-  @apply border-blue-dark;
+  @apply border-primary-dark;
 }
 
 .checkbox > input:checked + label::before {
-  @apply bg-blue-dark;
-  @apply border-blue-dark;
+  @apply bg-primary-dark;
+  @apply border-primary-dark;
 
   background-image: url('../assets/lock.svg');
   background-position: center;
@@ -90,8 +90,8 @@ body {
 }
 
 .checkbox > input:disabled + label::before {
-  @apply bg-blue-dark;
-  @apply border-blue-dark;
+  @apply bg-primary-dark;
+  @apply border-primary-dark;
 
   background-image: url('../assets/lock.svg');
   background-position: center;
@@ -285,6 +285,4 @@ select {
   }
 }
 
-.word-break-all {
-  word-break: break-all;
-}
+@import "asiance.css";

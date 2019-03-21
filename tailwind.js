@@ -41,7 +41,6 @@ View the full documentation at https://tailwindcss.com.
 | "secondary", or even a numeric scale like "100" and "200", go for it.
 |
 */
-
 const colors = {
   transparent: 'transparent',
 
@@ -95,13 +94,13 @@ const colors = {
   'teal-lighter': '#a0f0ed',
   'teal-lightest': '#e8fffe',
 
-  'blue-darkest': '#002275',
-  'blue-darker': '#003eaa',
-  'blue-dark': '#0060df',
+  'primary-darkest': '#002275',
+  'primary-darker': '#003eaa',
+  'primary-dark': '#0060df',
   blue: '#0a84ff',
-  'blue-light': '#6cb2eb',
-  'blue-lighter': '#bcdefa',
-  'blue-lightest': '#eff8ff',
+  'primary-light': '#6cb2eb',
+  'primary-lighter': '#bcdefa',
+  'primary-lightest': '#eff8ff',
 
   'indigo-darkest': '#191e38',
   'indigo-darker': '#2f365f',
@@ -126,7 +125,15 @@ const colors = {
   'pink-light': '#fa7ea8',
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
-  cloud: 'rgba(255, 255, 255, 0.8)'
+  cloud: 'rgba(255, 255, 255, 0.8)',
+
+  'primary-darkest': '#AA001A',
+  'primary-darker': '#B82A40',
+  'primary-dark': '#DC1F3C',
+  primary: '#E43852',
+  'primary-light': '#C65566',
+  'primary-lighter': '#E2AAB2',
+  'primary-lightest': '#eff8ff'
 };
 
 module.exports = {

@@ -46,7 +46,7 @@ function password(state) {
         id="password-input"
         class="${state.archive.password
           ? ''
-          : 'invisible'} border rounded focus:border-blue-dark leading-normal my-1 py-1 px-2 h-8"
+          : 'invisible'} border rounded focus:border-primary-dark leading-normal my-1 py-1 px-2 h-8"
         autocomplete="off"
         maxlength="${MAX_LENGTH}"
         type="password"
@@ -140,7 +140,7 @@ function archiveDetails(translate, archive) {
         ontoggle="${toggled}"
       >
         <summary
-          class="flex items-center text-blue-dark text-sm cursor-pointer outline-none"
+          class="flex items-center text-primary-dark text-sm cursor-pointer outline-none"
         >
           <svg
             class="fill-current w-4 h-4 mr-1"
@@ -170,7 +170,7 @@ module.exports = function(state, emit, archive) {
     state.capabilities.share || platform() === 'android'
       ? html`
           <button
-            class="text-blue-dark hover:text-blue-darker focus:text-blue-darker self-end flex items-end"
+            class="text-primary-dark hover:text-primary-darker focus:text-primary-darker self-end flex items-end"
             onclick=${share}
             title="Share link"
           >
@@ -179,7 +179,7 @@ module.exports = function(state, emit, archive) {
         `
       : html`
           <button
-            class="text-blue-dark hover:text-blue-darker focus:text-blue-darker focus:outline self-end flex items-center"
+            class="text-primary-dark hover:text-primary-darker focus:text-primary-darker focus:outline self-end flex items-center"
             onclick=${copy}
             title="${state.translate('copyLinkButton')}"
           >
@@ -191,7 +191,7 @@ module.exports = function(state, emit, archive) {
     platform() === 'web'
       ? html`
           <a
-            class="flex items-baseline text-blue-dark hover:text-blue-darker focus:text-blue-darker"
+            class="flex items-baseline text-primary-dark hover:text-primary-darker focus:text-primary-darker"
             href="${archive.url}"
             title="${state.translate('downloadButtonLabel')}"
             tabindex="0"
@@ -390,12 +390,12 @@ module.exports.uploading = function(state, emit) {
           expiresAt: Date.now() + 500 + state.archive.timeLimit * 1000
         })}
       </div>
-      <div class="text-blue-dark text-sm font-medium mt-2">
+      <div class="text-primary-dark text-sm font-medium mt-2">
         ${progressPercent}
       </div>
       <progress class="my-3" value="${progress}">${progressPercent}</progress>
       <button
-        class="text-blue-dark hover:text-blue-darker focus:text-blue-darker self-end font-medium"
+        class="text-primary-dark hover:text-primary-darker focus:text-primary-darker self-end font-medium"
         onclick=${cancel}
         title="${state.translate('deletePopupCancel')}"
       >
@@ -417,15 +417,12 @@ module.exports.empty = function(state, emit) {
       ? ''
       : html`
           <button
-            class="center font-medium text-sm text-blue-dark hover:text-blue-darker focus:text-blue-darker mt-4 mb-2"
+            class="center font-medium text-sm text-primary-dark hover:text-primary-darker focus:text-primary-darker mt-4 mb-2"
             onclick="${event => {
               event.stopPropagation();
               emit('signup-cta', 'drop');
             }}"
           >
-            ${state.translate('signInSizeBump', {
-              size: bytes(state.LIMITS.MAX_FILE_SIZE)
-            })}
           </button>
         `;
   return html`
@@ -471,12 +468,12 @@ module.exports.empty = function(state, emit) {
   `;
 
   function focus(event) {
-    event.target.nextElementSibling.classList.add('bg-blue-darker', 'outline');
+    event.target.nextElementSibling.classList.add('bg-primary-darker', 'outline');
   }
 
   function blur(event) {
     event.target.nextElementSibling.classList.remove(
-      'bg-blue-darker',
+      'bg-primary-darker',
       'outline'
     );
   }
@@ -534,7 +531,7 @@ module.exports.downloading = function(state) {
       class="flex flex-col bg-white rounded shadow-light p-4 w-full max-w-sm md:w-128"
     >
       ${archiveInfo(archive)}
-      <div class="text-blue-dark text-sm font-medium mt-2">
+      <div class="text-primary-dark text-sm font-medium mt-2">
         ${progressPercent}
       </div>
       <progress class="my-3" value="${progress}">${progressPercent}</progress>

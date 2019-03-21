@@ -29,7 +29,7 @@ module.exports = function(name, url) {
           ${state.translate('copyLinkButton')}
         </button>
         <button
-          class="text-blue-dark hover:text-blue-darker focus:text-blue-darker my-4 font-medium cursor-pointer focus:outline"
+          class="text-primary-dark hover:text-primary-darker focus:text-primary-darker my-4 font-medium cursor-pointer focus:outline"
           onclick="${close}"
           title="${state.translate('okButton')}"
         >
