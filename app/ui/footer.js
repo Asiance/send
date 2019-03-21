@@ -2,6 +2,8 @@ const html = require('choo/html');
 const Component = require('choo/component');
 const version = require('../../package.json').version;
 const { browserName } = require('../utils');
+const assets = require('../../common/assets');
+
 
 class Footer extends Component {
   constructor(name, state) {
@@ -25,7 +27,7 @@ class Footer extends Component {
           class="mozilla-logo pb-10 md:pb-0 m-2"
           href="https://www.mozilla.org/"
         >
-          Mozilla
+          Powered by Mozilla
         </a>
         <ul
           class="list-reset flex flex-col md:flex-row items-start md:items-center md:justify-end"

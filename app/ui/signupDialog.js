@@ -57,7 +57,7 @@ module.exports = function(trigger) {
             />
           </form>
           <button
-            class="my-3 text-blue-dark hover:text-blue-darker focus:text-blue-darker font-medium"
+            class="my-3 text-primary-dark hover:text-primary-darker focus:text-primary-darker font-medium"
             title="${state.translate('deletePopupCancel')}"
             onclick=${cancel}
           >
