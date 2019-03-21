@@ -1,5 +1,5 @@
-const html = require('choo/html');
-const modal = require('./modal');
+const html = require("choo/html");
+const modal = require("./modal");
 
 module.exports = function(state, emit) {
   return html`
@@ -9,9 +9,9 @@ module.exports = function(state, emit) {
         class="flex flex-col items-center bg-white m-4 px-6 py-8 border border-grey-30 md:border-none md:px-12 md:py-16 shadow w-full md:h-full dark:bg-grey-90"
       >
         <h1 class="text-center text-3xl font-bold">
-          ${state.translate('legalTitle')}
+          ${state.translate("legalTitle")}
         </h1>
-        <p class="mt-2">${state.translate('legalDateStamp')}</p>
+        <p class="mt-2">${state.translate("legalDateStamp")}</p>
         <div class="overflow-y-scroll py-8 px-12">
           <p class="leading-normal">
             <span>When Mozilla receives information from you, our</span>
@@ -19,7 +19,7 @@ module.exports = function(state, emit) {
               href="https://www.mozilla.org/privacy/"
               target="__blank"
               rel="noopener noreferrer"
-              class="link-blue hover:underline"
+              class="text-primary-dark hover:underline"
               >Mozilla Privacy Policy</a
             >
             <span
@@ -31,7 +31,7 @@ module.exports = function(state, emit) {
               href="https://github.com/mozilla/send/blob/master/docs/metrics.md"
               target="__blank"
               rel="noopener noreferrer"
-              class="link-blue hover:underline"
+              class="text-primary-dark hover:underline"
               >here</a
             >.
           </p>

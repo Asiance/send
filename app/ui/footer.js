@@ -1,7 +1,8 @@
-const html = require('choo/html');
-const Component = require('choo/component');
-const version = require('../../package.json').version;
-const { browserName } = require('../utils');
+const html = require("choo/html");
+const Component = require("choo/component");
+const version = require("../../package.json").version;
+const { browserName } = require("../utils");
+const assets = require("../../common/assets");
 
 class Footer extends Component {
   constructor(name, state) {
@@ -21,23 +22,26 @@ class Footer extends Component {
       <footer
         class="flex flex-col md:flex-row items-start w-full flex-none self-start p-6 md:p-8 font-medium text-xs text-grey-60 dark:text-grey-40 md:items-center justify-between"
       >
-        <a class="mozilla-logo m-2" href="https://www.mozilla.org/">
-          Mozilla
+        <a
+          class="mozilla-logo pb-10 md:pb-0 m-2"
+          href="https://www.mozilla.org/"
+        >
+          Powered by Mozilla
         </a>
         <ul
           class="flex flex-col md:flex-row items-start md:items-center md:justify-end"
         >
           <li class="m-2">
             <a href="https://www.mozilla.org/about/legal/terms/services/#send">
-              ${translate('footerLinkLegal')}
+              ${translate("footerLinkLegal")}
             </a>
           </li>
           <li class="m-2">
-            <a href="/legal"> ${translate('footerLinkPrivacy')} </a>
+            <a href="/legal"> ${translate("footerLinkPrivacy")} </a>
           </li>
           <li class="m-2">
             <a href="https://www.mozilla.org/privacy/websites/#cookies">
-              ${translate('footerLinkCookies')}
+              ${translate("footerLinkCookies")}
             </a>
           </li>
           <li class="m-2">
@@ -51,7 +55,7 @@ class Footer extends Component {
               alt="Feedback"
               target="_blank"
             >
-              ${translate('siteFeedback')}
+              ${translate("siteFeedback")}
             </a>
           </li>
         </ul>

@@ -31,7 +31,7 @@ a:focus {
 }
 
 body {
-  background-image: url('../assets/bg.svg');
+  background-image: url("../assets/bg.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,7 +39,7 @@ body {
 }
 
 .btn {
-  @apply bg-blue-60;
+  @apply bg-primary-dark;
   @apply text-white;
   @apply cursor-pointer;
   @apply py-4;
@@ -48,11 +48,11 @@ body {
 }
 
 .btn:hover {
-  @apply bg-blue-70;
+  @apply bg-primary-darker;
 }
 
 .btn:focus {
-  @apply bg-blue-70;
+  @apply bg-primary-darker;
 }
 
 .checkbox {
@@ -60,7 +60,7 @@ body {
   @apply select-none;
 }
 
-.checkbox > input[type='checkbox'] {
+.checkbox > input[type="checkbox"] {
   @apply absolute;
   @apply opacity-0;
 }
@@ -74,7 +74,7 @@ body {
   @apply border;
   @apply rounded-sm;
 
-  content: '';
+  content: "";
   height: 1.5rem;
   width: 1.5rem;
   margin-right: 0.5rem;
@@ -82,18 +82,18 @@ body {
 }
 
 .checkbox > label:hover::before {
-  @apply border-blue-50;
+  @apply border-primary-dark;
 }
 
 .checkbox > input:focus + label::before {
-  @apply border-blue-50;
+  @apply border-primary-dark;
 }
 
 .checkbox > input:checked + label::before {
-  @apply bg-blue-50;
-  @apply border-blue-50;
+  @apply bg-primary-dark;
+  @apply border-primary-dark;
 
-  background-image: url('../assets/lock.svg');
+  background-image: url("../assets/lock.svg");
   background-position: center;
   background-size: 1.25rem;
   background-repeat: no-repeat;
@@ -104,10 +104,10 @@ body {
 }
 
 .checkbox > input:disabled + label::before {
-  @apply bg-blue-50;
-  @apply border-blue-50;
+  @apply bg-primary-dark;
+  @apply border-primary-dark;
 
-  background-image: url('../assets/lock.svg');
+  background-image: url("../assets/lock.svg");
   background-position: center;
   background-size: 1.25rem;
   background-repeat: no-repeat;
@@ -140,7 +140,7 @@ footer li:hover {
 
 .feedback-link {
   background-color: #000;
-  background-image: url('../assets/feedback.svg');
+  background-image: url("../assets/feedback.svg");
   background-position: 0.125rem 0.25rem;
   background-repeat: no-repeat;
   background-size: 1.125rem;
@@ -188,7 +188,7 @@ footer li:hover {
 }
 
 .mozilla-logo {
-  background-image: url('../assets/mozilla-logo.svg');
+  background-image: url("../assets/mozilla-logo.svg");
   background-repeat: no-repeat;
   background-size: 100px, 48px;
   overflow: hidden;
@@ -201,7 +201,7 @@ footer li:hover {
 }
 
 #password-msg::after {
-  content: '\200b';
+  content: "\200b";
 }
 
 progress {
@@ -271,7 +271,7 @@ progress::-moz-progress-bar {
 }
 
 select {
-  background-image: url('../assets/select-arrow.svg');
+  background-image: url("../assets/select-arrow.svg");
   background-position: calc(100% - 0.75rem);
   background-repeat: no-repeat;
 }
@@ -371,69 +371,4 @@ select {
   }
 }
 
-.word-break-all {
-  word-break: break-all;
-  line-break: anywhere;
-}
-
-.signin {
-  backface-visibility: hidden;
-  border-radius: 6px;
-  transition-property: transform, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.07, 0.95, 0, 1);
-}
-
-.signin:hover,
-.signin:focus {
-  transform: scale(1.0625);
-}
-
-.signin:hover:active {
-  transform: scale(0.9375);
-}
-
-/* begin signin button color experiment */
-
-.white-blue {
-  @apply border-blue-60;
-  @apply border-2;
-  @apply text-blue-60;
-}
-
-.white-blue:hover,
-.white-blue:focus {
-  @apply bg-blue-60;
-  @apply text-white;
-}
-
-.blue {
-  @apply bg-blue-60;
-  @apply text-white;
-}
-
-.white-violet {
-  @apply border-violet;
-  @apply border-2;
-  @apply text-violet;
-}
-
-.white-violet:hover,
-.white-violet:focus {
-  @apply bg-violet;
-  @apply text-white;
-
-  background-image: var(--violet-gradient);
-}
-
-.violet {
-  @apply bg-violet;
-  @apply text-white;
-}
-
-.violet:hover,
-.violet:focus {
-  background-image: var(--violet-gradient);
-}
-
-/* end signin button color experiment */
+@import "asiance.css";
