@@ -6,10 +6,9 @@ const selectbox = require('./selectbox');
 module.exports = function(state, emit) {
   const el = html`
     <div class="px-1">
+      <select id="dlCount"></select>
       ${raw(
         state.translate('archiveExpiryInfo', {
-          downloadCount:
-            '<span class="lg:inline-block md:block sm:inline-block block"></span><select id="dlCount"></select>',
           timespan: '<select id="timespan"></select>'
         })
       )}

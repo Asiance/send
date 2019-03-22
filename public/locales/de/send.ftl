@@ -57,7 +57,7 @@ introTitle = Einfach und privat Dateien versenden
 introDescription = Mit { -send-brand } kannst du Dateien sicher mit anderen teilen – mit End-to-End-Verschlüsselung und einem Freigabe-Link, der automatisch abläuft. So bleiben deine geteilten Inhalte privat und du kannst sicherstellen, dass deine Daten nicht für immer im Web herumschwirren.
 notifyUploadEncryptDone = Deine Datei ist verschlüsselt und zum Senden bereit
 # downloadCount is from the downloadCount string and timespan is a timespanMinutes string. ex. 'Expires after 2 downloads or 25 minutes'
-archiveExpiryInfo = Läuft ab nach { $downloadCount } oder { $timespan }
+archiveExpiryInfo = Läuft ab nach { $timespan }
 timespanMinutes =
     { $num ->
         [one] 1 Minute

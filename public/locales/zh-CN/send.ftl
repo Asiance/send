@@ -55,7 +55,7 @@ introTitle = 简单、私密的文件分享服务
 introDescription = 使用 { -send-brand } 端到端加密分享文件，链接到期即焚。分享更私密，文件到期真正无痕迹。
 notifyUploadEncryptDone = 您的文件已加密并可以发送
 # downloadCount is from the downloadCount string and timespan is a timespanMinutes string. ex. 'Expires after 2 downloads or 25 minutes'
-archiveExpiryInfo = { $downloadCount }或 { $timespan }后过期
+archiveExpiryInfo = { $timespan }后过期
 timespanMinutes =
     { $num ->
         [one] 1 分钟

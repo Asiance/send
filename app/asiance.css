@@ -11,3 +11,11 @@ send-upload-area img {
 send-archive img {
     filter: hue-rotate(-220deg);
 }
+
+#expire-after-dl-count-select {
+    display:none;
+}
+
+.expire-after-time-select-label {
+    margin-right: .5rem;
+}
