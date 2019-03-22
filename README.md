@@ -11,6 +11,7 @@
 * [What it does](#what-it-does)
 * [Requirements](#requirements)
 * [Development](#development)
+* [Asiance deployment](#asiance-deployment)
 * [Commands](#commands)
 * [Configuration](#configuration)
 * [Localization](#localization)
@@ -45,6 +46,19 @@ npm start
 ```
 
 Then browse to http://localhost:8080
+
+---
+
+## Asiance deployment
+
+To build and deploy the new version(** Be sure to be logged in into our private repository)
+
+```sh
+npm run build && docker build --rm -t docker.registry.asiance.com/mozilla-send .
+docker push docker.registry.asiance.com/mozilla-send:latest
+```
+
+Then trigger a deployment of asiance-dl project on Jenkins administration page
 
 ---
 

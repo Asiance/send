@@ -4,9 +4,9 @@ const { secondsToL10nId } = require('../utils');
 const selectbox = require('./selectbox');
 
 module.exports = function(state, emit) {
+  state.archive.dlimit = state.user.maxDownloads;
   const el = html`
     <div class="px-1">
-      <select id="dlCount"></select>
       ${raw(
         state.translate('archiveExpiryInfo', {
           timespan: '<select id="timespan"></select>'
@@ -18,30 +18,6 @@ module.exports = function(state, emit) {
     // we're rendering on the server
     return el;
   }
-
-  const counts = state.DEFAULTS.DOWNLOAD_COUNTS.filter(
-    i => state.capabilities.account || i <= state.user.maxDownloads
-  );
-
-  const dlCountSelect = el.querySelector('#dlCount');
-  el.replaceChild(
-    selectbox(
-      state.archive.dlimit,
-      counts,
-      num => state.translate('downloadCount', { num }),
-      value => {
-        const max = state.user.maxDownloads;
-        state.archive.dlimit = Math.min(value, max);
-        if (value > max) {
-          emit('signup-cta', 'count');
-        } else {
-          emit('render');
-        }
-      },
-      'expire-after-dl-count-select'
-    ),
-    dlCountSelect
-  );
 
   const expires = state.DEFAULTS.EXPIRE_TIMES_SECONDS.filter(
     i => state.capabilities.account || i <= state.user.maxExpireSeconds

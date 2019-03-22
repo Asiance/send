@@ -3,7 +3,6 @@ const assets = require('../../common/assets');
 const { bytes } = require('../utils');
 
 module.exports = function intro(state) {
-  console.log(state.archive)
   return html`
     <send-intro
       class="flex flex-col items-center justify-center bg-white px-6 md:py-0 py-6 mb-0 h-full w-full"

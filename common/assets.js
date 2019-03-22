@@ -12,7 +12,6 @@ try {
 const assets = isServer ? manifest : genmap;
 
 function getAsset(name) {
-  console.log(prefix + assets[name])
   return prefix + assets[name];
 }
 
