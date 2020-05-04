@@ -63,6 +63,15 @@ module.exports = function(state, body = '') {
           color="#838383"
         />
         <script defer src="${assets.get('app.js')}"></script>
+        <!-- Global site tag (gtag.js) - Google Ads: 990862230 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-990862230"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-990862230');
+        </script>
       </head>
       <noscript>
         <div class="noscript">
