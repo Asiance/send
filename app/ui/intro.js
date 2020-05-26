@@ -8,7 +8,7 @@ module.exports = function intro(state) {
     >
       <div class="mt-12 flex flex-col h-full">
         <p class="max-w-sm leading-normal mt-6 md:mt-2 md:pr-16">
-          500 Mb maximum of images, pdf, ms office or archives.
+          1.0GB maximum of images, pdf, ms office or archives.
         </p>
         <img class="intro" src="${assets.get("intro.svg")}" />
       </div>
