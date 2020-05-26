@@ -30,41 +30,7 @@ module.exports = function(app) {
     req.cspNonce = crypto.randomBytes(16).toString('hex');
     next();
   });
-  if (!IS_DEV) {
-    app.use(
-      helmet.contentSecurityPolicy({
-        directives: {
-          defaultSrc: ["'self'"],
-          connectSrc: [
-            "'self'",
-            'wss://*.dev.lcip.org',
-            'wss://*.send.nonprod.cloudops.mozgcp.net',
-            'wss://send.firefox.com',
-            'https://*.dev.lcip.org',
-            'https://accounts.firefox.com',
-            'https://*.accounts.firefox.com',
-            'https://sentry.prod.mozaws.net'
-          ],
-          imgSrc: [
-            "'self'",
-            'https://*.dev.lcip.org',
-            'https://firefoxusercontent.com',
-            'https://secure.gravatar.com'
-          ],
-          scriptSrc: [
-            "'self'",
-            function(req) {
-              return `'nonce-${req.cspNonce}'`;
-            }
-          ],
-          formAction: ["'none'"],
-          frameAncestors: ["'none'"],
-          objectSrc: ["'none'"],
-          reportUri: '/__cspreport__'
-        }
-      })
-    );
-  }
+  
   app.use(function(req, res, next) {
     res.set('Pragma', 'no-cache');
     res.set(
