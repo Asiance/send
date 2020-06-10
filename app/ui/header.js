@@ -1,15 +1,15 @@
-const html = require("choo/html");
-const Component = require("choo/component");
-const Account = require("./account");
-const assets = require("../../common/assets");
-const { platform } = require("../utils");
+const html = require('choo/html');
+const Component = require('choo/component');
+const Account = require('./account');
+const assets = require('../../common/assets');
+const { platform } = require('../utils');
 
 class Header extends Component {
   constructor(name, state, emit) {
     super(name);
     this.state = state;
     this.emit = emit;
-    this.account = state.cache(Account, "account");
+    this.account = state.cache(Account, 'account');
   }
 
   update() {
@@ -18,15 +18,13 @@ class Header extends Component {
   }
   createElement() {
     const title =
-      platform() === "android"
+      platform() === 'android'
         ? html`
-            <a class=""
-              ><img src="${assets.get("asiance-logo-colors-256.png")}"
-            /></a>
+            <a class=""><img src="${assets.get('logo_navy_256.png')}"/></a>
           `
         : html`
             <a class="" href="/"
-              ><img src="${assets.get("asiance-logo-colors-256.png")}"
+              ><img src="${assets.get('logo_navy_256.png')}"
             /></a>
           `;
     return html`
