@@ -77,7 +77,11 @@ function body(main) {
     state.capabilities = {
       account: true
     }; //TODO
-    state.archive = new Archive([], DEFAULTS.EXPIRE_SECONDS);
+    state.archive = new Archive(
+      [],
+      DEFAULTS.EXPIRE_SECONDS,
+      DEFAULTS.EXPIRE_COUNTS
+    );
     state.storage = storage;
     state.user = new User(storage, LIMITS);
     state.sentry = Sentry;

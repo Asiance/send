@@ -16,6 +16,7 @@ module.exports = {
   DEFAULTS: {
     DOWNLOAD_COUNTS: config.download_counts,
     EXPIRE_TIMES_SECONDS: config.expire_times_seconds,
+    EXPIRE_COUNTS: config.default_expire_counts,
     EXPIRE_SECONDS: config.default_expire_seconds
   }
 };

@@ -14,11 +14,12 @@ function isDupe(newFile, array) {
 }
 
 export default class Archive {
-  constructor(files = [], defaultTimeLimit = 86400) {
+  constructor(files = [], defaultTimeLimit = 86400, defaultExpireCount = 100) {
     this.files = Array.from(files);
     this.defaultTimeLimit = defaultTimeLimit;
+    this.defaultExpireCount = defaultExpireCount;
     this.timeLimit = defaultTimeLimit;
-    this.dlimit = 1;
+    this.dlimit = defaultExpireCount;
     this.password = null;
   }
 
@@ -76,7 +77,7 @@ export default class Archive {
 
   clear() {
     this.files = [];
-    this.dlimit = 1;
+    this.dlimit = this.defaultExpireCount;
     this.timeLimit = this.defaultTimeLimit;
     this.password = null;
   }

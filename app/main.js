@@ -52,7 +52,7 @@ if (process.env.NODE_ENV === 'production') {
     LIMITS,
     DEFAULTS,
     PREFS,
-    archive: new Archive([], DEFAULTS.EXPIRE_SECONDS),
+    archive: new Archive([], DEFAULTS.EXPIRE_SECONDS, DEFAULTS.EXPIRE_COUNTS),
     capabilities,
     translate,
     storage,

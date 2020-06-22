@@ -34,6 +34,11 @@ const conf = convict({
     default: 86400,
     env: 'ANON_MAX_EXPIRE_SECONDS'
   },
+  default_expire_counts: {
+    format: Number,
+    default: 1000,
+    env: 'DEFAULT_EXPIRE_COUNTS'
+  },
   download_counts: {
     format: Array,
     default: [1, 2, 3, 4, 5, 20, 50, 100],
